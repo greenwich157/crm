@@ -26,7 +26,7 @@ public class CustomerController {
 			tmpCustName.setName(customer.get(i).getName());
 			tmpCustName.setCustId(customer.get(i).getCustId());
 			Link selfLink = linkTo(CustomerController.class).slash("customers").slash(customerId).withRel("profile");
-			tmpCustName.add(selfLink);
+//			tmpCustName.add(selfLink);
 			custName.add(tmpCustName);
 		}
 		
@@ -38,9 +38,9 @@ public class CustomerController {
 	public Customer getCustomer(@PathVariable String id) {
 		Customer customer = customerService.getCustomer(id);
 		Link selfLink = linkTo(CustomerController.class).slash("customers").slash(id).slash("product").withRel("product");
-		customer.add(selfLink);
+//		customer.add(selfLink);
 		Link selfLink2 = linkTo(CustomerController.class).slash("customers").slash(id).slash("bill").withRel("bill");
-		customer.add(selfLink2);
+//		customer.add(selfLink2);
 		return customer;
 	}
 	
