@@ -1,4 +1,4 @@
 FROM openjdk:8-jdk-alpine
+COPY target/greenwich157-crm.jar /tmp/app.jar
 VOLUME /tmp
-ADD spring-boot-docker-1.0.jar app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
