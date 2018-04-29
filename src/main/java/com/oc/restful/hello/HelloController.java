@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
 	@RequestMapping("/")
-	public String greetings() {
+	public String greetings() throws InterruptedException {
+		Thread.sleep(2000);
 		return "<H1>Network Service Bus Demo</H1>";
 	}
 }
