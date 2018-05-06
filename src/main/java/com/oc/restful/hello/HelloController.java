@@ -8,7 +8,7 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String greetings() throws InterruptedException {
-		Thread.sleep(3000);
+		// Thread.sleep(3000);
 		return "<H1>Network Service Bus Demo</H1>";
 	}
 }
